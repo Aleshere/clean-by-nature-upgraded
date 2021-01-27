@@ -8199,7 +8199,7 @@ input.custom-radio ~ label {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   top: 0%;
   left: 0;
@@ -8409,6 +8409,15 @@ div.panel.show {
   color: var(--blog-links) !important;
   transition: color 250ms ease-out;
 }
+#sq__footage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .square-footage {
-  width: 100%;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
 }
