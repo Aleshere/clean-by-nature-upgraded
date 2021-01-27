@@ -5149,30 +5149,30 @@
         });
       },
     }),
-    ot.each({ scrollLeft: 'pageXOffset', scrollTop: 'pageYOffset' }, function (
-      t,
-      e
-    ) {
-      var i = 'pageYOffset' === e;
-      ot.fn[t] = function (n) {
-        return wt(
-          this,
-          function (t, n, r) {
-            var o = Y(t);
-            return void 0 === r
-              ? o
-                ? o[e]
-                : t[n]
-              : void (o
-                  ? o.scrollTo(i ? o.pageXOffset : r, i ? r : o.pageYOffset)
-                  : (t[n] = r));
-          },
-          t,
-          n,
-          arguments.length
-        );
-      };
-    }),
+    ot.each(
+      { scrollLeft: 'pageXOffset', scrollTop: 'pageYOffset' },
+      function (t, e) {
+        var i = 'pageYOffset' === e;
+        ot.fn[t] = function (n) {
+          return wt(
+            this,
+            function (t, n, r) {
+              var o = Y(t);
+              return void 0 === r
+                ? o
+                  ? o[e]
+                  : t[n]
+                : void (o
+                    ? o.scrollTo(i ? o.pageXOffset : r, i ? r : o.pageYOffset)
+                    : (t[n] = r));
+            },
+            t,
+            n,
+            arguments.length
+          );
+        };
+      }
+    ),
     ot.each(['top', 'left'], function (t, e) {
       ot.cssHooks[e] = A(nt.pixelPosition, function (t, i) {
         return i
@@ -5181,39 +5181,39 @@
       });
     }),
     ot.each({ Height: 'height', Width: 'width' }, function (t, e) {
-      ot.each({ padding: 'inner' + t, content: e, '': 'outer' + t }, function (
-        i,
-        n
-      ) {
-        ot.fn[n] = function (n, r) {
-          var o = arguments.length && (i || 'boolean' != typeof n),
-            s = i || (n === !0 || r === !0 ? 'margin' : 'border');
-          return wt(
-            this,
-            function (e, i, n) {
-              var r;
-              return ot.isWindow(e)
-                ? e.document.documentElement['client' + t]
-                : 9 === e.nodeType
-                ? ((r = e.documentElement),
-                  Math.max(
-                    e.body['scroll' + t],
-                    r['scroll' + t],
-                    e.body['offset' + t],
-                    r['offset' + t],
-                    r['client' + t]
-                  ))
-                : void 0 === n
-                ? ot.css(e, i, s)
-                : ot.style(e, i, n, s);
-            },
-            e,
-            o ? n : void 0,
-            o,
-            null
-          );
-        };
-      });
+      ot.each(
+        { padding: 'inner' + t, content: e, '': 'outer' + t },
+        function (i, n) {
+          ot.fn[n] = function (n, r) {
+            var o = arguments.length && (i || 'boolean' != typeof n),
+              s = i || (n === !0 || r === !0 ? 'margin' : 'border');
+            return wt(
+              this,
+              function (e, i, n) {
+                var r;
+                return ot.isWindow(e)
+                  ? e.document.documentElement['client' + t]
+                  : 9 === e.nodeType
+                  ? ((r = e.documentElement),
+                    Math.max(
+                      e.body['scroll' + t],
+                      r['scroll' + t],
+                      e.body['offset' + t],
+                      r['offset' + t],
+                      r['client' + t]
+                    ))
+                  : void 0 === n
+                  ? ot.css(e, i, s)
+                  : ot.style(e, i, n, s);
+              },
+              e,
+              o ? n : void 0,
+              o,
+              null
+            );
+          };
+        }
+      );
     }),
     ot.fn.extend({
       bind: function (t, e, i) {
@@ -23542,23 +23542,27 @@ if (
         }
       }
       var r = this;
-      E.on('click', '.ab-navbar a, a.ab-header-title-scroll-down', function (
-        e
-      ) {
-        var i = this.hash,
-          n = this.baseURI === window.location.href;
-        if (i && n) {
-          var o = b(i),
-            s = i.replace(/^#/, '');
-          (o.length || 'top' === s || 'bottom' === s) &&
-            (t(),
-            o.length &&
-              !b(this).hasClass('ab-header-title-scroll-down') &&
-              (o.attr('id', ''), (document.location.hash = s), o.attr('id', s)),
-            r.scrollTo(o.length ? o : s),
-            e.preventDefault());
+      E.on(
+        'click',
+        '.ab-navbar a, a.ab-header-title-scroll-down',
+        function (e) {
+          var i = this.hash,
+            n = this.baseURI === window.location.href;
+          if (i && n) {
+            var o = b(i),
+              s = i.replace(/^#/, '');
+            (o.length || 'top' === s || 'bottom' === s) &&
+              (t(),
+              o.length &&
+                !b(this).hasClass('ab-header-title-scroll-down') &&
+                (o.attr('id', ''),
+                (document.location.hash = s),
+                o.attr('id', s)),
+              r.scrollTo(o.length ? o : s),
+              e.preventDefault());
+          }
         }
-      });
+      );
       var o = b('.ab-navbar .ab-nav > li > a[href*="#"]'),
         s = [];
       o.each(function () {
@@ -23866,4 +23870,3 @@ if (
       })();
     (window.Snow = new F()), window.Snow.init();
   })();
-
