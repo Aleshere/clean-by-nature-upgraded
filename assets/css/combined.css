@@ -4595,7 +4595,7 @@ h4 {
     display: none;
   }
   .ab-header-table-cell .container .fw-300 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 .ab-subtitle,
@@ -4715,7 +4715,7 @@ h4 {
   color: var(--text-dark-blue) !important;
 }
 .text-light-blue {
-  color: var(--blog-links);
+  color: var(--text-dark-blue);
 }
 .text-dark-1 {
   color: var(--black-dark-1) !important;
@@ -7000,21 +7000,22 @@ div.ab-error {
 .ab-icon-burger {
   position: relative;
   display: inline-block;
-  width: 20px;
+  width: 30px;
   height: 18px;
-  color: var(--black-dark-1);
+  color: var(--text-dark-blue);
 }
 .ab-icon-burger > span {
   position: absolute;
   display: block;
   width: 20px;
   height: 0;
-  border-bottom: 2px solid;
+  border-bottom: 4px solid;
   top: 50%;
   transition: width 0.3s 0.2s, opacity 0.3s, transform 0.2s;
   will-change: width, opacity, transform;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  border-radius: 4px;
 }
 .ab-icon-burger .ab-t-1 {
   margin-top: -8px;
@@ -7510,12 +7511,12 @@ a:hover > .ab-icon-search:after {
   display: -ms-flexbox;
   display: flex;
   color: var(--plain-white);
-  background-color: rgba(18, 12, 90, 0.85);
+  background-color: rgba(0, 0, 0, 0.4);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0;
+  /* opacity: 0; */
   padding: 50px;
   transition: opacity 0.5s, background-color 0.5s;
 }
@@ -7535,8 +7536,8 @@ a:hover > .ab-icon-search:after {
 .ab-portfolio-list
   .ab-portfolio-item.ab-portfolio-item-info-style-2
   .ab-portfolio-item-info.ab-portfolio-item-info-center {
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -7586,7 +7587,8 @@ a:hover > .ab-icon-search:after {
   .ab-portfolio-item.ab-portfolio-item-info-style-2
   .portfolio-item-title {
   transform: translateY(10px);
-  opacity: 0;
+  opacity: 1;
+  mix-blend-mode: luminosity;
   transition: transform 0.4s 0.2s, opacity 0.4s 0.2s;
 }
 .ab-portfolio-list
