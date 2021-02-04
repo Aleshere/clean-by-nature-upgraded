@@ -8225,6 +8225,9 @@ input.custom-radio:checked ~ label {
 .radio-wrap.fifth {
   width: 20%;
 }
+.radio-wrap.third {
+  width: 33.3%;
+}
 /* SCROLL DOWN BOUNCING */
 .scrollDownIcon {
   -moz-animation: bounce 2s infinite;
@@ -8291,7 +8294,7 @@ p.accordion::after {
   position: absolute;
   display: block;
   top: 50%;
-  right: 0;
+  left: 1%;
   transform: translate(-50%, -50%);
   color: transparent;
   text-shadow: 0 0 0 rgba(101, 144, 212, 0.85);
